@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="mystyle2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" />
+    <script src="https://kit.fontawesome.com/77d6ea2540.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet" />
+    <script>
+      // MUSIC FESTS
+      var slideIndexMusicFest = 1;
+      showSlidesMusicFest(slideIndexMusicFest);
+
+      // Next/previous controls
+      function plusSlidesMusicFest(n) {
+        showSlidesMusicFest((slideIndexMusicFest += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlideMusicFest(n) {
+        showSlidesMusicFest((slideIndexMusicFest = n));
+      }
+
+      function showSlidesMusicFest(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlidesMusicFest");
+        if (n > slides.length) {
+          slideIndexMusicFest = 1;
+        }
+        if (n < 1) {
+          slideIndexMusicFest = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndexMusicFest - 1].style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("myModalMusicFest").style.display = "none";
+      }
+
+      //EVENTS
+
+      var slideIndexEvents = 1;
+      showSlidesEvents(slideIndexEvents);
+
+      // Next/previous controls
+      function plusSlidesEvents(n) {
+        showSlidesEvents((slideIndexEvents += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlideEvents(n) {
+        showSlidesEvents((slideIndexEvents = n));
+      }
+
+      function showSlidesEvents(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlidesEvents");
+        if (n > slides.length) {
+          slideIndexEvents = 1;
+        }
+        if (n < 1) {
+          slideIndexEvents = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndexEvents - 1].style.display = "block";
+      }
+
+      function closeModalEvents() {
+        document.getElementById("myModalEvents").style.display = "none";
+      }
+
+      var slideIndexBTS = 1;
+      showSlidesBTS(slideIndexBTS);
+
+      // Next/previous controls
+      function plusSlidesBTS(n) {
+        showSlidesBTS((slideIndexBTS += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlideBTS(n) {
+        showSlidesBTS((slideIndexBTS = n));
+      }
+
+      function showSlidesBTS(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlidesBTS");
+        if (n > slides.length) {
+          slideIndexBTS = 1;
+        }
+        if (n < 1) {
+          slideIndexBTS = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndexBTS - 1].style.display = "block";
+      }
+
+      function closeModalBTS() {
+        document.getElementById("myModalBTS").style.display = "none";
+      }
+
+      var slideIndexProd = 1;
+      showSlidesProd(slideIndexProd);
+
+      // Next/previous controls
+      function plusSlidesProd(n) {
+        showSlidesProd((slideIndexProd += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlideProd(n) {
+        showSlidesProd((slideIndexProd = n));
+      }
+
+      function showSlidesProd(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlidesProd");
+        if (n > slides.length) {
+          slideIndexProd = 1;
+        }
+        if (n < 1) {
+          slideIndexProd = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndexProd - 1].style.display = "block";
+      }
+
+      function closeModalProd() {
+        document.getElementById("myModalProd").style.display = "none";
+      }
+
+      const engLink = document.getElementById("eng-link");
+      const srLink = document.getElementById("sr-link");
+
+      // Initial state, assuming English is selected
+      engLink.classList.add("active");
+
+      // Function to toggle language links
+      function toggleLanguage(event) {
+        event.preventDefault();
+        if (event.target.id === "eng-link") {
+          engLink.classList.add("active");
+          srLink.classList.remove("active");
+        } else {
+          srLink.classList.add("active");
+          engLink.classList.remove("active");
+        }
+      }
+
+      // Event listeners for language links
+      engLink.addEventListener("click", toggleLanguage);
+      srLink.addEventListener("click", toggleLanguage);
+    </script>
+  </head>
+  <body>
+    <div class="nav_div">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="fas fa-bars-staggered" style="color: #feffff"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav mx-auto smaller-text">
+              <li class="nav-item">
+                <a class="nav-link" href="#home" id="pocetna">Početna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#mojiprojekti" id="portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#omeni" id="omeni1">O meni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kontakt" id="kontakt1">Kontakt</a>
+              </li>
+            </ul>
+            <ul class="navbar-right">
+              <a href="#" class="language-link" id="eng-link">ENG</a>
+              <a href="#" class="language-link" id="sr-link">SR</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="home" class="carousel-container">
+      <div id="divcarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#divcarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#divcarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#divcarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#divcarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#divcarousel" data-bs-slide-to="4"></button>
+        </div>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner h-100 d-block" id="carousel-large">
+          <div class="carousel-item active">
+            <img
+              src="images/Todor homepage webp/TMRW Dubai Day 1 by Todor Milivojevic-28.webp"
+              alt="image1"
+              class="d-block w-100 img-cropped"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/Todor homepage webp/Todor - Mainstaage - Offenbach-5.webp"
+              alt="image2"
+              class="d-block w-100 img-cropped"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/Todor homepage webp/Todor Milivojevic - LMF Day 3-18.webp"
+              alt="image3"
+              class="d-block w-100 img-cropped"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/Todor homepage webp/Todor Milivojevic - MAC Awards Day 2_-17.webp"
+              alt="image4"
+              class="d-block w-100 img-cropped"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/Todor homepage webp/Todor Milivojevic - MAC Awards Day 2_-53.webp"
+              alt="image5"
+              class="d-block w-100 img-cropped"
+            />
+          </div>
+        </div>
+        <!-- <div class="carousel-mobile h-100 d-none d-sm-block" id="carousel-mobile"></div> -->
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#divcarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#divcarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mojiprojekti">
+      <div class="container-fluid projects-fluid">
+        <div class="container projects-container">
+          <div class="row">
+            <div class="col text-left">
+              <p class="z moji" id="moji">MOJI</p>
+              <p class="z proj" id="projekti">PROJEKTI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid gallery-container p-0" style="padding-left: 0; padding-right: 0; overflow-x: hidden">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12" id="music-festivals" style="cursor: pointer">
+            <img
+              src="images/Todor homepage webp/1.webp"
+              alt="Slika 1"
+              style="width: 100%; height: auto; display: block"
+            />
+            <div class="overlay">
+              <div class="text left" id="muzicki">MUSIC</div>
+              <div class="text right" id="festivali">FESTIVALS</div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12" id="events" style="cursor: pointer">
+            <img
+              src="images/Todor homepage webp/2.webp"
+              alt="Slika 2"
+              style="width: 100%; height: auto; display: block"
+            />
+            <div class="overlay">
+              <div class="text center" id="dogadjaji">EVENTS</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12" id="behindthescenes" style="cursor: pointer">
+            <img
+              src="images/Todor homepage webp/3.webp"
+              alt="Slika 3"
+              style="width: 100%; height: auto; display: block"
+            />
+            <div class="overlay">
+              <div class="text left" id="iza">BEHIND THE</div>
+              <div class="text right" id="scena">SCENES</div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12" id="product" style="cursor: pointer">
+            <img
+              src="images/Todor homepage webp/4.webp"
+              alt="Slika 4"
+              style="width: 100%; height: auto; display: block"
+            />
+            <div class="overlay">
+              <div class="text center" id="proizvod">PRODUCT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="omeni">
+      <div class="container-fluid aboutme-fluid">
+        <div class="container aboutme-container">
+          <div class="row">
+            <div class="text-left">
+              <p id="aboutme">O MENI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid o-meni-container">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-lg-4 col-sm-12 first-text">
+              <p style="color: white" id="firstpar">
+                Tokom godina, stekao sam iskustvo u zabeležavanju nezaboravnih trenutaka tokom muzičkih festivala. Volim
+                da istražujem različite stilove i teme. Učim nove tehnike i istražujem mogućnosti koje mi tehnologija
+                pruža da bih napredovao kao fotograf.
+              </p>
+            </div>
+            <div class="image-container col-lg-4 col-sm-12">
+              <img src="images/Todor homepage webp/IMG-20221223-WA0000.webp" alt="Slika" />
+            </div>
+            <div class="col-lg-4 col-sm-12 second-text">
+              <p style="color: white" id="secondpar">
+                Ja sam Todor Milivojević, imam 23 godine i već devet godina se bavim fotografijom. Fokusiram se na
+                fotografisanje muzičkih festivala i događaja, ali istovremeno fotografišem različite teme.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="kontakt">
+      <div class="container-fluid kontakt-container d-flex align-items-end">
+        <div class="row g-0 p-0 justify-content-center">
+          <div class="col-lg-4 image-container-kontakt position-relative">
+            <img src="images/Todor homepage webp/contact 1.webp" alt="Slika" class="img-fluid" style="opacity: 0.28" />
+            <div class="icon-container position-absolute top-0 start-0">
+              <img class="image-phone" src="images/Todor homepage webp/Path 9.png" alt="Opis slike" />
+              <p class="phone-number">+381 65 33 12 205</p>
+            </div>
+          </div>
+          <div class="col-lg-4 image-container-kontakt position-relative">
+            <img src="images/Todor homepage webp/contact 2.webp" alt="Slika" class="img-fluid" style="opacity: 0.28" />
+            <div class="icon-container position-absolute top-0 start-0">
+              <img class="image-mail" src="images/Todor homepage webp/Group 8.png" alt="Opis slike" />
+              <p class="phone-number">todor.milivojevic3@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4 image-container-kontakt position-relative">
+            <img src="images/Todor homepage webp/contact 3.webp" alt="Slika" class="img-fluid" style="opacity: 0.28" />
+            <div class="icon-container position-absolute top-0 start-0">
+              <img class="image-insta" src="images/Todor homepage webp/Group 7.png" alt="Opis slike" />
+              <p class="phone-number">@todorm99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div id="myModalMusicFest" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">1 / 20</div>
+          <img
+            src="images/Music Festival/Todor - BIH Color Festival Day 2 - Galoski-10 copy.webp"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">2 / 20</div>
+          <img
+            src="images/Music Festival/Todor - BIH Color Festival Day 2 - nipplepeople-30.webp"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">3 / 20</div>
+          <img src="images/Music Festival/Todor - Divolly _ Markward-7.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">4 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Van Gogh - Dan 1-83.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">5 / 20</div>
+          <img src="images/Music Festival/Todor - Fresh Wave Dan 1-205.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">6 / 20</div>
+          <img src="images/Music Festival/Todor - Freshwave Day 3-55.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">7 / 20</div>
+          <img src="images/Music Festival/Todor - Freshwave Day 3-59.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">8 / 20</div>
+          <img src="images/Music Festival/Todor - Mainstaage - Offenbach-5.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">9 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Amnesia Day 2-6.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">10 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Hot Since Belgrade-121.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">11 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Hot Since Belgrade-130.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">12 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Hot Since Belgrade-164.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">13 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Illusions 26.05-39.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">14 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Illusions 26.05-39.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">15 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Illusions 26.05-44.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">16 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Illusions 27.05-75.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">17 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - LMF Day 3-18.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">18 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Paul Kalkbrener-8.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">19 / 20</div>
+          <img src="images/Music Festival/Todor Milivojevic - Paul Kalkbrener.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesMusicFest">
+          <div class="numbertext">20 / 20</div>
+          <img src="images/Music Festival/Todor - Fresh Wave Dan 1-205.webp" style="width: 100%" />
+        </div>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlidesMusicFest(-1)" id="prevbuttonmusicfest">&#10094;</a>
+        <a class="next" onclick="plusSlidesMusicFest(1)" id="nextbuttonmusicfest">&#10095;</a>
+      </div>
+    </div>
+
+    <div id="myModalEvents" class="modal">
+      <span class="close cursor" onclick="closeModalEvents()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlidesEvents">
+          <div class="numbertext">1 / 22</div>
+          <img src="images/Events/Todor Milivojevic- Luxoft teambuilding-99.webp" style="width: 100%" />
+        </div>
+
+        <div class="mySlidesEvents">
+          <div class="numbertext">2 / 22</div>
+          <img src="images/Events/BW NYE Zeljko Joksimovic by Todor Milivojevic-22.webp" style="width: 100%" />
+        </div>
+
+        <div class="mySlidesEvents">
+          <div class="numbertext">3 / 22</div>
+          <img src="images/Events/Eucerin Event by Todor Milivojevic-114.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">4 / 22</div>
+          <img src="images/Events/Eucerin Event by Todor Milivojevic-118.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">5 / 22</div>
+          <img src="images/Events/Eucerin Event by Todor Milivojevic-125.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">6 / 22</div>
+          <img src="images/Events/Eucerin Event by Todor Milivojevic-148.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">7 / 22</div>
+          <img src="images/Events/Eucerin Event by Todor Milivojevic-59.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">8 / 22</div>
+          <img src="images/Events/TMRW Dubai Day 1 by Todor Milivojevic-28.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">9 / 22</div>
+          <img src="images/Events/TMRW Dubai Day 2 by Todor Milivojevic-17.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">10 / 22</div>
+          <img src="images/Events/TMRW Dubai Day 2 by Todor Milivojevic-23.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">11 / 22</div>
+          <img src="images/Events/TMRW Dubai Day 2 by Todor Milivojevic-80.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">12 / 22</div>
+          <img src="images/Events/Todor Milivojevic - MAC Awards Day 2_-17.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">13 / 22</div>
+          <img src="images/Events/Todor Milivojevic - MAC Awards Day 2_-32.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">14 / 22</div>
+          <img src="images/Events/Todor Milivojevic - MAC Awards Day 2_-36.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">15 / 22</div>
+          <img src="images/Events/Todor Milivojevic - MAC Awards Day 2_-38.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">16 / 22</div>
+          <img src="images/Events/Todor Milivojevic - MAC Awards Day 2_-53.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">17 / 22</div>
+          <img src="images/Events/Todor Milivojevic - MAC Awards Day 2_-87.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">18 / 22</div>
+          <img src="images/Events/Todor Milivojevic- Luxoft teambuilding-26.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">19 / 22</div>
+          <img src="images/Events/Todor Milivojevic- Luxoft teambuilding-37.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">20 / 22</div>
+          <img src="images/Events/Todor Milivojevic- Luxoft teambuilding-56.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">21 / 22</div>
+          <img src="images/Events/Todor Milivojevic- Luxoft teambuilding-86.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesEvents">
+          <div class="numbertext">22 / 22</div>
+          <img src="images/Events/BW NYE Zeljko Joksimovic by Todor Milivojevic-10.webp" style="width: 100%" />
+        </div>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlidesEvents(-1)" id="prevbuttonevents">&#10094;</a>
+        <a class="next" onclick="plusSlidesEvents(1)" id="nextbuttonevents">&#10095;</a>
+      </div>
+    </div>
+
+    <div id="myModalBTS" class="modal">
+      <span class="close cursor" onclick="closeModalBTS()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlidesBTS">
+          <div class="numbertext">1 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 1-32.webp" style="width: 100%" />
+        </div>
+
+        <div class="mySlidesBTS">
+          <div class="numbertext">2 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 1-36.webp" style="width: 100%" />
+        </div>
+
+        <div class="mySlidesBTS">
+          <div class="numbertext">3 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 1-38.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">4 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 1-53.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">5 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 1-60.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">6 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 1-9.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">7 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 2-23.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">8 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 2-79.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">9 / 20</div>
+          <img src="images/BTS/C Infinity Kickstarter BTS Day 2-80.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">10 / 20</div>
+          <img src="images/BTS/DSC_0467.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">11 / 20</div>
+          <img src="images/BTS/DSC_9179.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">12 / 20</div>
+          <img src="images/BTS/DSC_9189.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">13 / 20</div>
+          <img src="images/BTS/DSC_9250.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">14 / 20</div>
+          <img src="images/BTS/Todor Milivojevic - Chipsy BTS-13.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">15 / 20</div>
+          <img src="images/BTS/Todor Milivojevic - Chipsy BTS-2.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">16 / 20</div>
+          <img src="images/BTS/Todor Milivojevic - Chipsy BTS-35.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">17 / 20</div>
+          <img src="images/BTS/Todor Milivojevic - Chipsy BTS-40.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">18 / 20</div>
+          <img src="images/BTS/Todor Milivojevic - Chipsy BTS-5.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">19 / 20</div>
+          <img src="images/BTS/Todor Milivojevic - Chipsy BTS-62.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesBTS">
+          <div class="numbertext">20 / 20</div>
+          <img src="images/BTS/Todor Milivojevic - Chipsy BTS-63.webp" style="width: 100%" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlidesBTS(-1)" id="prevbuttonbts">&#10094;</a>
+        <a class="next" onclick="plusSlidesBTS(1)" id="nextbuttonprod">&#10095;</a>
+      </div>
+    </div>
+
+    <div id="myModalProd" class="modal">
+      <span class="close cursor" onclick="closeModalProd()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlidesProd">
+          <div class="numbertext">1 / 10</div>
+          <img src="images/Product/DSC_0401 copy.webp" style="width: 100%" />
+        </div>
+
+        <div class="mySlidesProd">
+          <div class="numbertext">2 / 10</div>
+          <img src="images/Product/DSC_8316 copy.webp" style="width: 100%" />
+        </div>
+
+        <div class="mySlidesProd">
+          <div class="numbertext">3 / 10</div>
+          <img src="images/Product/DSC_8468 copy.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesProd">
+          <div class="numbertext">4 / 10</div>
+          <img src="images/Product/DSC_9448 copy.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesProd">
+          <div class="numbertext">5 / 10</div>
+          <img src="images/Product/DSC_9455 copy.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesProd">
+          <div class="numbertext">6 / 10</div>
+          <img src="images/Product/DSC_9465 copy.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesProd">
+          <div class="numbertext">7 / 10</div>
+          <img src="images/Product/DSC_9468 copy.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesProd">
+          <div class="numbertext">8 / 10</div>
+          <img src="images/Product/DSC_9804 copy.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesProd">
+          <div class="numbertext">9 / 10</div>
+          <img src="images/Product/DSC_9969 copy.webp" style="width: 100%" />
+        </div>
+        <div class="mySlidesProd">
+          <div class="numbertext">10 / 10</div>
+          <img src="images/Product/DSC_9972 copy.webp" style="width: 100%" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlidesProd(-1)" id="prevbuttonprod">&#10094;</a>
+        <a class="next" onclick="plusSlidesProd(1)" id="nextbuttonprod">&#10095;</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,668 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav_div {
+  font-size: 20px;
+  font-family: "Unbounded", sans-serif;
+}
+
+.nav-item .nav-link {
+  color: white;
+  margin-right: 30px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Bela boja teksta prilikom hovera */
+}
+
+.navbar-right {
+  margin-left: -145px;
+}
+
+/* animacija ispod linka */
+.nav-item {
+  display: inline-block;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 20px; /* Prilagodite veličinu teksta prema potrebi */
+  padding-bottom: 5px; /* Dodajte odgovarajući razmak ispod teksta */
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Prilagodite visinu linije prema potrebi */
+  background-color: #ffffff; /* Bela boja linije */
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ostaje belo kada se klikne na link */
+.nav-link:focus,
+.nav-link:active {
+  color: #ffffff !important; /* Bela boja teksta */
+}
+
+/* New CSS for Language Toggle */
+.language-toggle {
+  float: right;
+  margin-top: 5px; /* Adjust the margin as needed */
+}
+
+.language-link {
+  color: #ffffff;
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-left: 15px; /* Adjust the spacing between links as needed */
+}
+
+/* Active state for language links */
+#eng-link.active {
+  color: #ffffff; /* White color for the active link */
+}
+
+#sr-link.active {
+  color: #ffffff; /* Whitish color for the active link */
+}
+
+.darken-text {
+  color: #999;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+/* carousel */
+/* zatamnjivanje slika */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
+/* carousel buttons hidden */
+.carousel-control-prev,
+.carousel-control-next {
+  border: none;
+  outline: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.projects-fluid {
+  background-color: black;
+}
+
+/* moji projekti */
+.projects-container {
+  color: white;
+  min-height: 400px;
+  font-family: "Unbounded", sans-serif;
+  font-size: 96px;
+  /* namesta na sredinu vertikalno sa leve strane horizontalno */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.moji {
+  margin-bottom: -45px;
+}
+
+.proj {
+  margin-left: 70px;
+}
+
+.gallery-container .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.gallery-container .col-lg-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* o meni */
+/* prvi */
+.aboutme-fluid {
+  background-color: black;
+}
+
+.aboutme-container {
+  color: white;
+  min-height: 200px;
+  font-family: "Unbounded", sans-serif;
+  font-size: 96px;
+  /* namesta na sredinu horizontalno i spušta uz donju ivicu vertikalno */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* drugi */
+.image-container {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.o-meni-container {
+  background-color: black;
+}
+
+.first-text {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 100;
+  display: flex;
+  font-size: 16px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.second-text {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.kontakt-container {
+  min-height: 700px;
+  background-color: black;
+}
+
+.kontakt-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.kontakt-container .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.kontakt-container .col-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.image-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.image-container-kontakt .image-phone {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90px; /* Prilagodite željenu širinu ikonice */
+  height: auto;
+}
+.image-container-kontakt .image-mail {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95px; /* Prilagodite željenu širinu ikonice */
+  height: auto;
+}
+.image-container-kontakt .image-insta {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90px; /* Prilagodite željenu širinu ikonice */
+  height: auto;
+}
+
+.phone-number {
+  margin-top: 175px;
+  text-align: center;
+  color: white;
+  font-family: "Unbounded", sans-serif;
+  font-size: 24px;
+}
+
+/* animacije galerija */
+.darken-image img {
+  transition: filter 0.3s;
+}
+
+.darken-image img:hover {
+  filter: brightness(70%);
+}
+
+#music-festivals {
+  position: relative;
+}
+
+#events {
+  position: relative;
+}
+
+#behindthescenes {
+  position: relative;
+}
+
+#product {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s;
+}
+
+#music-festivals:hover .overlay {
+  opacity: 1;
+}
+
+#events:hover .overlay {
+  opacity: 1;
+}
+
+#behindthescenes:hover .overlay {
+  opacity: 1;
+}
+
+#product:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 46px;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  font-family: "Unbounded", sans-serif;
+}
+
+#music-festivals:hover .text {
+  transform: translateX(0);
+}
+
+#events:hover .text {
+  transform: translateX(0);
+}
+
+#behindthescenes:hover .text {
+  transform: translateX(0);
+}
+
+#product:hover .text {
+  transform: translateX(0);
+}
+
+.text.right {
+  transform: translateX(100%);
+  margin-top: 40px;
+  margin-left: -40px;
+}
+
+.text.left {
+  margin-bottom: 40px;
+}
+
+#behindthescenes .text.right {
+  margin-left: -80px;
+}
+
+#music-festivals:hover .text.right {
+  transform: translateX(0);
+}
+
+#events:hover .text.right {
+  transform: translateX(0);
+}
+
+#behindthescenes:hover .text.right {
+  transform: translateX(0);
+}
+
+#product:hover .text.right {
+  transform: translateX(0);
+}
+
+/* modal */
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlidesMusicFest {
+  display: none;
+}
+
+.mySlidesMusicFest img {
+  border: none;
+  border-radius: 1%;
+  box-shadow: 0 0 0 4px white, 0 0 0 8px rgba(0, 0, 0, 0.85);
+}
+
+.mySlidesEvents img {
+  border: none;
+  border-radius: 1%;
+  box-shadow: 0 0 0 4px white, 0 0 0 8px rgba(0, 0, 0, 0.85);
+}
+
+.mySlidesBTS img {
+  border: none;
+  border-radius: 1%;
+  box-shadow: 0 0 0 4px white, 0 0 0 8px rgba(0, 0, 0, 0.85);
+}
+
+.mySlidesProd img {
+  border: none;
+  border-radius: 1%;
+  box-shadow: 0 0 0 4px white, 0 0 0 8px rgba(0, 0, 0, 0.85);
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* telefon */
+@media (max-width: 575.98px) {
+  button.navbar-toggler:focus {
+    outline: none;
+  }
+
+  #divcarousel .carousel-inner,
+  #divcarousel .carousel-inner .carousel-item {
+    height: 852px; /* Postavite željenu visinu karusela za mobilne uređaje */
+  }
+
+  .smaller-text .nav-link {
+    font-size: 16px;
+  }
+
+  .navbar-nav .nav-link:hover::before,
+  .navbar-nav .nav-link:hover::after {
+    transition: none !important;
+    transform: none !important;
+    width: 0 !important;
+    opacity: 0 !important;
+  }
+  .navbar-collapse {
+    justify-content: flex-start !important;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-start !important;
+    margin-top: -10px;
+  }
+
+  .navbar-right {
+    margin-left: -46px;
+  }
+
+  .navbar-nav {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: auto !important;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-left p {
+    font-size: 36px; /* Novi font na manjim ekranima */
+  }
+
+  .moji {
+    margin-bottom: -10px;
+  }
+
+  .proj {
+    margin-left: 70px;
+    margin-bottom: 20px;
+  }
+
+  .text.left {
+    font-size: 24px;
+  }
+
+  .text.right {
+    font-size: 24px;
+  }
+
+  .text.center {
+    font-size: 24px;
+  }
+
+  .first-text {
+    font-size: 14px;
+  }
+
+  .second-text {
+    font-size: 14px;
+  }
+
+  .phone-number {
+    font-size: 14px;
+  }
+
+  #music-festivals .overlay {
+    opacity: 1;
+  }
+
+  #events .overlay {
+    opacity: 1;
+  }
+
+  #behindthescenes .overlay {
+    opacity: 1;
+  }
+
+  #product .overlay {
+    opacity: 1;
+  }
+
+  #music-festivals .text {
+    transform: translateX(0);
+  }
+
+  #events .text {
+    transform: translateX(0);
+  }
+
+  #behindthescenes .text {
+    transform: translateX(0);
+  }
+
+  #product .text {
+    transform: translateX(0);
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+  }
+}
